@@ -1,0 +1,46 @@
+when an argument is passed as *const char *s* , u mean that It will remain constant.But if we want to access it,
+there are three ways of doing it.
+
+#+BEGIN_SRC c
+
+   const char *s= "Hello world";
+   char *b = "hello";
+   
+   b = "gmail";
+   printf("%s", b);
+   
+   s = "facebook";
+   printf("%s", s);
+   
+   char *c = b;
+   printf("%s", c);
+   char *d = s;
+   printf("%s", d);
+#+END_SRC
+
+There are 3 choice:
+
+ Remove the const modifier of param:
+
+#+BEGIN_SRC c
+void test(char *str) {
+  char *s = str;
+}
+#+END_SRC
+
+ Declare the target variable also as const:
+
+#+BEGIN_SRC 
+void test(const char *str) {
+  const char *s = str;
+}
+#+END_SRC
+
+ Use a type convert:
+
+#+BEGIN_SRC 
+
+void test(const char *str) {
+  char *s = (char *)str;
+}
+#+END_SRC
