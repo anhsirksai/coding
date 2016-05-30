@@ -21,7 +21,7 @@ Near-neighbor searching (of which spell-checking is a special case).[1]
 As a database especially when indexing by several non-key fields is desirable.[4]
 In place of a hash table.[4]
 
-###  TST VS TRIE:
+###  TST VS TRIE:(Copied from Quora, lazy to find the link now)
 
 Essentially a TST is just one way of implementing a Trie where you store edges in a binary search tree.  There are a few other ways of implementing a Trie including storing edges in a global hash table, per node hash table, array, or array with condensing.
 
