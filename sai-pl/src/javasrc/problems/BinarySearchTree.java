@@ -9,15 +9,18 @@ public class BinarySearchTree {
         T val;
         TreeNode left;
         TreeNode right;
+        TreeNode next;
         TreeNode() {
             val = null;
             left = null;
             right = null;
+            next = null;
         }
         TreeNode(T v) {
             val = v;
             left = null;
             right = null;
+            next = null;
         }
 
         TreeNode neighbor;
@@ -41,7 +44,7 @@ public class BinarySearchTree {
         while (!currentLevel.isEmpty()) {
             final TreeNode currentNode = currentLevel.remove();
 
-            Hashtable<currentNode.val, >
+            //Hashtable<currentNode.val, >
 
             if (currentNode.left != null) {
                 nextLevel.add(currentNode.left);

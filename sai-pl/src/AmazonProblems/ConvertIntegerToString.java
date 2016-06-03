@@ -27,10 +27,10 @@ public class ConvertIntegerToString {
         System.out.println(out);
     }}
 
-    //approach2
+    //approach2 using stack and string builder.
     private static String convertIntegerToString(Integer num) {
         List<String> stack = new LinkedList<>();
-        boolean negetive = num < 0 ? true : false;
+        boolean negative = num < 0 ? true : false;
         if (num < 0) {
             num = (num * -1);
         }
@@ -38,7 +38,7 @@ public class ConvertIntegerToString {
             stack.add(num % 10 + "");
             num = num / 10;
         }
-        if(negetive)
+        if(negative)
             stack.add("-");
         StringBuilder sb = new StringBuilder();
         for (int i = stack.size() - 1; i >= 0; i--) {

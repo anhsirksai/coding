@@ -25,3 +25,6 @@ Online Coding Round:
 4. Write the function for insert and search for TRIE?
 5. DFS and BFS .
 6. How to get the shortest path from (0 , 0) to (r , c) in a rectangular grid in which some cells are blocked.
+
+### Continuation Problems:
+1. http://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/
