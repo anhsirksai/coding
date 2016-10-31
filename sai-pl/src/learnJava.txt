@@ -1,0 +1,218 @@
+1. Program initialization :
+
+import java.util.ArrayList;
+
+public class DP {
+
+// minimum coins for a change
+    // O(mV)
+    public int minCoins(int[] coins, int V) {
+
+        return totalAmount[V];
+    }
+
+ public static void main(String[] args) {
+        DP dp = new DP();
+        
+	int[] coins = {1,5,6,9};
+        System.out.println(dp.minCoins(coins, 11));*/
+    }
+}
+
+DS Program.
+====
+public class Graph {
+
+     public enum State {
+        Unvisited, Visited, Visiting;
+    }
+
+    ArrayList<Node> nodes;
+    ArrayList<Node> getNodes() {return nodes;}
+
+    public void addNode(Node first, Node... n) {
+		It means that zero or more String objects (or an array of them) may be passed as the parameter(s) for that function.
+		
+		Important Note: The parameter(s) passed in this way is always an array - even if there's just one. Make sure you treat it that way in the method body.
+		Important Note 2: The parameter that gets the ... must be the last in the method signature. So, myMethod(int i, String... strings) is okay, but myMethod(String... strings, int i) is not okay.
+    }
+
+
+    class Node<T> {
+        private T value;
+        State state;
+        public Node(T val) {
+            value = val;
+            state = State.Unvisited;
+        }
+
+	private ArrayList<Node> neighbors;
+	public ArrayList<Node> getNeighbors() {
+		}
+        public void addNeighbors(Node n, Node... nodes) {
+		
+		for(Node nd : nodes)
+                    neighbors.add(nd); // Foreach loop.
+		}
+    }
+
+    public Graph sampleGraph() {
+        Graph g = new Graph();
+        Node a = new Node('a');
+        Node b = new Node('b');
+
+	a.addNeighbors(b, c, d);
+        b.addNeighbors(c, d);
+        c.addNeighbors(d);
+        g.addNode(a, b, c, d, e);
+        return g;
+    }
+
+    public static void main(String[] args) {
+        Graph g = new Graph();
+        g = g.sampleGraph();
+        System.out.println(g.pathExists2(g, g.getNodes().get(0), g.getNodes().get(3)));
+    }
+}
+
+---------------------------------------------------------
+
+2. Bit Manipulation techniques.
+
+a. Play with ints.
+====
+System.out.println(Integer.valueOf("1011001",2));
+89
+
+System.out.println(String.valueOf(Integer.valueOf("1110001",2)));
+113
+
+
+b. Split int and decimal parts :
+====
+String input = "3.45"
+
+int intPart = Integer.valueOf(Integer.parseInt(input.substring(0, input.indexOf('.'))));
+3
+
+double decPart = Double.valueOf(Double.parseDouble(input.substring(input.indexOf('.'))));
+0.45
+
+c. Manipulate bits :
+ N = N & ~(1<<k);
+ M = M<<j;
+ N = N | M;
+
+---------------------------------
+
+3. Data Types
+
+String :
+
+int m = s1.length();
+if(s1.charAt(i-1) == s2.charAt(j-1))
+
+String input;
+input = input.toUpperCase()
+
+Math
+
+int[][] LCS = new int[m+1][n+1];
+LCS[i][j] = Math.max(LCS[i-1][j], LCS[i][j-1]);
+LCS[i][j] = 1 + LCS[i-1][j-1];
+maxLen = Math.max(maxLen, LCS[i][j]);
+
+Boolean :
+boolean[][] palin = new boolean[n][n];
+palin[i][j] = false;
+
+Random Number :
+ return new Random().nextInt(n2) - n1;
+
+Random random = new Random();
+Integer newPos = random.nextInt(i);
+
+----------------------------
+
+4. Operations on Collections.
+
+ArrayList<Integer> input
+	input.get(n)
+
+Queue<Node> que = new LinkedList<Node>();
+        que.add(start);
+	while(!que.isEmpty()) {
+            Node n = que.remove();
+
+public class Hash {
+     public static HashMap<Character, Integer> getLettersMap(){
+        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        Character ch = 'A';
+        while(ch <= 'Z') {
+            switch(ch) {
+                case 'A' : case 'B' : case 'C' : map.put(ch, 2); break;
+                case 'W' : case 'X' : case 'Y' : case 'Z' : map.put(ch, 9); break;
+            }
+            ch++;
+        }
+        return map;
+    }
+
+public boolean hasSum(ArrayList<Integer> integers, int sum) {
+    HashMap<Integer, Boolean> map = new HashMap<Integer, Boolean>();
+        for(Integer i : integers) {
+            if(map.containsKey(sum - i))
+                return true;
+            map.put(i, true);
+        }
+return false;
+}
+
+public static int getNonTwice(ArrayList<Integer> input) {
+        HashSet<Integer> set = new HashSet<Integer>();
+        int sum = 0;
+        for(Integer i : input) {
+            if(set.contains(i)) {
+                sum -= i;
+            } else {
+                set.add(i);
+                sum += i;
+            }
+        }
+        return sum;
+}
+
+
+public int[] maxSumSubArray(int[]  A) {
+        int maxSum = 0;
+        int begin = 0, end = 0, maxBegin=0, maxEnd=0;
+
+        return Arrays.copyOfRange(A, maxBegin, maxEnd);
+}
+
+
+
+
+
+-------------------
+
+5. DP
+
+declare storage
+write loops
+	update storage
+return storage
+
+-------------------
+
+6. Generics.
+
+
+-------------------
+
+7. Patterns.
+
+Dependency Injection.
+http://stackoverflow.com/a/3334585
+
+
