@@ -25,7 +25,7 @@
   + Stripped : Stripe across disks.(2 or more disks and stripe across disks.)
   + Mirrorred : 1 disk, mirror an exact copy to other disk. i.e we have redundancy.
   + Amazon discourages to use RAID5.(Use of parity - a checksum.)
-+ 
+ 
 ### Create an AMI
 + first take a snapshot of a running instance. Then click on "Create Image" on that snapshot to create the AMI.
 + A complete copy of an EC2 instance. By default , AMI image is private. "Modify Image Permissions" - Add permissions to share b/n multiple aws accounts, make image public.
@@ -38,3 +38,8 @@
   + Securely delete any additional certificates or key material from the system.
   + Ensure that software installed on your AMI does not have default internal accounts and passwords (e.g. database servers with a default admin username and password).
   + Ensure that the system does not violate the Amazon Web Services Acceptable Use Policy. Examples include open SMTP relays or proxy servers.
++ Exam Tips :
+  + AMI is region specific when created. So EC2 can be created only in that region. However, AMI's can be copied into other regions to create ec2 instances.
+  
+### EBS Root Volumes Vs Instance store.
++ 
