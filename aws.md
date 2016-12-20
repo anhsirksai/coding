@@ -26,3 +26,15 @@
   + Mirrorred : 1 disk, mirror an exact copy to other disk. i.e we have redundancy.
   + Amazon discourages to use RAID5.(Use of parity - a checksum.)
 + 
+### Create an AMI
++ first take a snapshot of a running instance. Then click on "Create Image" on that snapshot to create the AMI.
++ A complete copy of an EC2 instance. By default , AMI image is private. "Modify Image Permissions" - Add permissions to share b/n multiple aws accounts, make image public.
++ While making the AMI public : follow the best practices for security.
+  + https://aws.amazon.com/articles/9001172542712674
+  + Disable services and protocols that authenticate users in clear text (e.g. Telnet and FTP).
+  + Do not start unnecessary network services on launch. Only administrative services (SSH/RDP) and the services required for your application should be started.
+  + Securely delete all AWS credentials from disk and configuration files.
+  + Securely delete any third-party credentials from disk and configuration files.
+  + Securely delete any additional certificates or key material from the system.
+  + Ensure that software installed on your AMI does not have default internal accounts and passwords (e.g. database servers with a default admin username and password).
+  + Ensure that the system does not violate the Amazon Web Services Acceptable Use Policy. Examples include open SMTP relays or proxy servers.
