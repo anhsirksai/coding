@@ -41,5 +41,11 @@
 + Exam Tips :
   + AMI is region specific when created. So EC2 can be created only in that region. However, AMI's can be copied into other regions to create ec2 instances.
   
-### EBS Root Volumes Vs Instance store.
-+ 
+### EBS Root Volumes Vs Instance store.(Where OS can run on)
++ Instance store : cannot stop the instance. only terminate. Also called Ephimeral storage.
++ EBS : Can stop and take a snapshot. Can be stopped. 
++ Instance store : not persistant. On termination - deletes the instance store device.
++ EBS : can be detached and attached.(even the root file system.) This can be saved even after the instance termination.
++ Both can be rebooted.
+
+### Cleation of ELB
