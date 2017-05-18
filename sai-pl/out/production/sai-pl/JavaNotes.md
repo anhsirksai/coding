@@ -84,3 +84,70 @@ for(Map.Entry<K,V> entry: m.entrySet())
 In Java 8 you can write
 
 m.forEach((k, v) -> System.out.println(k + ": " + v));
+
+### Topics: Collections, Exceptions, Threads
++ running ready-to-run resume suspended locked
++ priority
++ context switch
++ currentThread() getName() serName() getPriority() isAlive()
++ Extending thread class run() | implementing a runnable interface (Benifit: when extending a class, we cant extend any other class)
++ Synchronization - Synchronized() or synchronized statement. - To avoid race conditions while executing threads in parallel.
++ Interthread comm : wait() notify() nitifyAll()
++ Executor framework :
+	- Specify user defined threadpool
++ callable and future : in run method, nothing can be returned. So to return something.
+	- callable: return object. public String call throws Execution{}
+#### Exceptions
++ checked exception : compile-time. handled in compiler.: throws
++ unchecked exception : runtime. We should handle these in program. throw
+
+```http://stackoverflow.com/questions/3940213/exception-handling-throw-throws-and-throwable```
+
++ throws() - The method calling this function with checked exception should handle in the method only.
++ throw() - Should be followed by a catch block, if we dont want to use throws.
++ java7 features: try with resources
+
+#### Collections
+```
+Collections :
+
+Object :
+	- Methods (9). like hashcode(), equals().  http://stackoverflow.com/questions/27581/what-issues-should-be-considered-when-overriding-equals-and-hashcode-in-java
+	- Hashcode is a pointer to a memory location.
+	- : These methods can be overrided to verify equality of objects.
+	- If equals method is overridden, we should make sure hashcode also matches.
+	
+
+Comparable and comparator :
+	- comparator is a class.
+	- comparable is an interface.
+Set:
+===	
+Hashset: - No ordering. considers equals and hashcode.
+Treeset: - Ordering via comparable class and comparator interface.
+LinkedHashSet: retains insertion ordering. Considers equals and hashcode. 
+
+List:
+====
+- Arraylist
+- Linkedlist
+
+Map:
+===
+Key - should be Immutable.
+
+utility operations in collections:
+===
+
+
+1.5 additional features:
++ Generics:
+	- generic print collection function.
++ AutoBoxing:
+int b =2;
+Integer a = b;
+
++ varargs:
++ Static import:
++ annotations:
+```
