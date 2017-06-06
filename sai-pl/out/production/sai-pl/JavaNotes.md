@@ -1,3 +1,25 @@
+```
+// Other data types worth checking out
+        // ArrayLists - Like arrays except more functionality is offered, and
+        //              the size is mutable.
+        // LinkedLists - Implementation of doubly-linked list. All of the
+        //               operations perform as could be expected for a
+        //               doubly-linked list.
+        // Maps - A set of objects that map keys to values. Map is
+        //        an interface and therefore cannot be instantiated.
+        //        The type of keys and values contained in a Map must
+        //        be specified upon instantiation of the implementing
+        //        class. Each key may map to only one corresponding value,
+        //        and each key may appear only once (no duplicates).
+        // HashMaps - This class uses a hashtable to implement the Map
+        //            interface. This allows the execution time of basic
+        //            operations, such as get and insert element, to remain
+        //            constant even for large sets.
+        // TreeMap - This class is a sorted tree structure. It implements a red
+        //           black tree and sorts the entries based on the key value or
+        //           the comparator provided while creating the object
+```
+
 ## ArrayList vs. LinkedList vs. Vector
 
 From the hierarchy diagram, they all implement List interface. They are very similar to use. Their main difference is their implementation which causes different performance for different operations.  ArrayList is implemented as a resizable array. As more elements are added to ArrayList, its size is increased dynamically. It's elements can be accessed directly by using the get and set methods, since ArrayList is essentially an array. LinkedList is implemented as a double linked list. Its performance on add and remove is better than Arraylist, but worse on get and set methods. Vector is similar with ArrayList, but it is synchronized. ArrayList is a better choice if your program is thread-safe. Vector and ArrayList require space as more elements are added. Vector each time doubles its array size, while ArrayList grow 50% of its size each time. LinkedList, however, also implements Queue interface which adds more methods than ArrayList and Vector, such as offer(), peek(), poll(), etc.    Note: The default initial capacity of an ArrayList is pretty small. It is a good habit to construct the ArrayList with a higher initial capacity. This can avoid the resizing cost.
