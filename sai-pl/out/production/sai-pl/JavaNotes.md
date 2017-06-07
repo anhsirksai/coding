@@ -174,12 +174,14 @@ Integer a = b;
 + annotations:
 ```
 
-#### Abstract class, extends(inheretence), interface, final class and method
+#### Abstract class, extends(inheretence), interface, implements, final class and method
 + Abstract methods are methods which do not have method statements. The subclasse provides the method statements. The methods provided by the superclass needs to be overridden by the subclass. The class that has at least one abstract method should be made abstract. The abstract class can not be instantiated because it does not define a complete implementation.
 
 + Using Final with methods: We can prevent a method from being overridden by using the keyword final at the start of its declaration. Final methods can not be overridden.
 
 + Using Final with class: We can also prevent inheritance by making a class final. When a class is declared as final, its methods also become final. An abstract class cannot be declared as final because an abstract class is incomplete and its subclasses need to provide the implementation.
+
++ variables in interface will be static and final.
 
 + Inheretence:
 ```
