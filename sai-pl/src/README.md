@@ -12,3 +12,5 @@ The idea for creating this repo is picked up from Hema09(github handle) and is e
  logical thinking, optimization, effective coding
  
  I am in a situation to design custom algos/DS in many cases, so looking for a team mate with these skills seems to be important.
+ 
+ ## Merging upstream changes directly in github into a already forked repo.
